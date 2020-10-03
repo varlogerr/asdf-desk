@@ -11,4 +11,4 @@ cmd+=" ${releases_url}"
 eval "${cmd}" \
 | grep -P '^\s*\"tag_name\":\s*\".+"' \
 | sed -E 's/.*\"v(.+)\",/\1/g' \
-| sort -n | xargs
+| sort -V | xargs
